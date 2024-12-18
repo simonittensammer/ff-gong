@@ -14,7 +14,7 @@ def list_voices():
         print()
 
 def fetch_data():
-    url = "https://cf-einsaetze.ooelfv.at/webext2/rss/json_laufend.txt"
+    url = "https://cf-einsaetze.ooelfv.at/webext2/rss/json_2tage.txt"
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -70,9 +70,9 @@ def speak_text(text, voice_id=None):
 def main():
     speak_text("Dies ist ein Test.")
 
-    target_brigade = "Feuerwehr/Florian Tragwein (35211)"
+    target_brigade = "Feuerwehr/Florian Jeging (33208)"
     alert_sound = "gong.mp3"  # Path to your alert sound file
-    interval = 5  # Fetch data every 10 seconds
+    interval = 5  # Fetch data every 5 seconds
     alert_counts = {}  # Track the number of alerts per einsatz
 
     # Initialize pygame mixer
